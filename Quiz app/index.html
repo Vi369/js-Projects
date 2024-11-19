@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- link to style.css -->
+     <link rel="stylesheet" href="style.css">
+    <title>Quiz App</title>
+</head>
+<body>
+    <main class="container">
+        <h1>Quiz App</h1>
+
+        <!-- quiz container -->
+         <div id="quiz-container">
+            <!-- question container -->
+            <div id="question-container"  >
+                <h2 id="question-text"></h2>
+
+                <!-- question choice -->
+                 <ul id="options-list">
+                    <!-- options will be added dynamically here -->
+                 </ul>
+
+                 <!-- previous button -->
+                  <button id="previous-btn">Previous</button>
+
+                 <!-- next button -->
+                  <button id="next-btn">Next</button>
+            </div>
+         </div>
+
+         <!-- result container -->
+          <div id="result-container" class="hidden">
+            <h2>Your Result: </h2>
+            <p id="show-result"></p>
+
+            <!-- restart button -->
+             <button id="restart-btn">Restart</button>
+          </div>
+
+          <!-- start button -->
+           <button id="start-btn">Start Quiz</button>
+    </main>
+</body>
+</html>
