@@ -71,3 +71,8 @@ li{
 .hidden{
     display: none;
 }
+
+.selected{
+    background-color: #88ee48;
+    color: #10170b;
+}
