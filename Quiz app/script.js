@@ -16,11 +16,13 @@ document.addEventListener('DOMContentLoaded', () => {
             question: 'What is the capital of France?',
             options: ['Paris', 'London', 'Berlin', 'Rome'],
             answer: 'Paris',
+            selected: false,
         },
         {
             question: "Which planet is known as the Red Planet?",
             options: ["Mars", "Venus", "Jupiter", "Saturn"],
             answer: "Mars",
+            selected: false,
         },
           {
             question: "Who wrote 'Hamlet'?",
@@ -31,16 +33,19 @@ document.addEventListener('DOMContentLoaded', () => {
               "Mark Twain",
             ],
             answer: "William Shakespeare",
+            selected: false,
         },
         {
             question: 'What is the capital of Italy?',
             options: ['Paris', 'London', 'Berlin', 'Rome'],
             answer: 'Rome',
+            selected: false,
         },
         {
             question: 'What is the capital of Germany?',
             options: ['Paris', 'London', 'Berlin', 'Rome'],
             answer: 'Berlin',
+            selected: false,
         },
     ];
 
@@ -122,11 +127,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // add selected class to the selected option
         document.getElementById(`option${index}`).classList.add('selected');
+
+        // check if the question is already selected
+        if(quizData[currentQuestionIndex].selected){
+            return;
+        }
+
+        // mark the question as selected
+        quizData[currentQuestionIndex].selected = true;
         
         const correctAnswer = quizData[currentQuestionIndex].answer;
         if(option === correctAnswer){
             score++;
-            console.log(score)
         }
     }
 
